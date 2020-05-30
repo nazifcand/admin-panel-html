@@ -171,6 +171,7 @@ body {
           border-radius: 100%;
           border: 2px solid #fff;
           box-shadow: 0 0 5px rgba($text-color, 0.15);
+          object-fit: cover;
         }
         span {
           display: flex;
@@ -241,16 +242,19 @@ body {
       padding: 0 25px;
       box-sizing: border-box;
       align-items: center;
+      justify-content: flex-end;
       img {
         width: 70px;
         height: 70px;
         border-radius: 100%;
         border: 2px solid #fff;
         margin-right: 20px;
+        object-fit: cover;
       }
       .info-user {
         display: flex;
         flex-direction: column;
+        margin-right: auto;
         span {
           font-size: 16px;
           font-weight: 500;
@@ -259,8 +263,20 @@ body {
         }
         p {
           font-size: 12px;
-          color: #ddd;
+          color: #fff;
+          font-weight: 300;
         }
+      }
+      .box {
+        width: 175px;
+        height: 70px;
+        border-radius: 10px;
+        background-color: rgba($text-color, 0.25);
+        flex: flex-end;
+        margin: 0 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
