@@ -25,18 +25,20 @@ const input_checkbox = document.querySelectorAll(
   '.checkbox input[type="checkbox"]'
 );
 
-checkboxs.forEach((checkbox, index) => {
-  if (checkbox.classList.contains('checked')) {
-    input_checkbox[index].setAttribute('checked', 'true');
-  }
-
-  checkbox.addEventListener('click', () => {
+if (checkboxs) {
+  checkboxs.forEach((checkbox, index) => {
     if (checkbox.classList.contains('checked')) {
-      checkbox.classList.remove('checked');
-      input_checkbox[index].removeAttribute('checked');
-    } else {
-      checkbox.classList.add('checked');
       input_checkbox[index].setAttribute('checked', 'true');
     }
+
+    checkbox.addEventListener('click', () => {
+      if (checkbox.classList.contains('checked')) {
+        checkbox.classList.remove('checked');
+        input_checkbox[index].removeAttribute('checked');
+      } else {
+        checkbox.classList.add('checked');
+        input_checkbox[index].setAttribute('checked', 'true');
+      }
+    });
   });
-});
+}
