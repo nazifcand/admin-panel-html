@@ -18,3 +18,25 @@ input_imgs.forEach((input, index) => {
     previews[index].style.display = 'block';
   });
 });
+
+/* checkboxs */
+const checkboxs = document.querySelectorAll('.checkbox');
+const input_checkbox = document.querySelectorAll(
+  '.checkbox input[type="checkbox"]'
+);
+
+checkboxs.forEach((checkbox, index) => {
+  if (checkbox.classList.contains('checked')) {
+    input_checkbox[index].setAttribute('checked', 'true');
+  }
+
+  checkbox.addEventListener('click', () => {
+    if (checkbox.classList.contains('checked')) {
+      checkbox.classList.remove('checked');
+      input_checkbox[index].removeAttribute('checked');
+    } else {
+      checkbox.classList.add('checked');
+      input_checkbox[index].setAttribute('checked', 'true');
+    }
+  });
+});
