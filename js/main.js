@@ -8,3 +8,13 @@ menu_item.forEach((item, index) => {
     item.classList.add('active');
   });
 });
+
+/* select img */
+const input_imgs = document.querySelectorAll('.group input[type="file"]');
+const previews = document.querySelectorAll('.preview');
+input_imgs.forEach((input, index) => {
+  input.addEventListener('change', () => {
+    previews[index].src = URL.createObjectURL(input.files[0]);
+    previews[index].style.display = 'block';
+  });
+});
