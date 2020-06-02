@@ -13,6 +13,7 @@ body {
   color: $text-color;
   font-family: 'Poppins';
   background-color: #f5f6fa;
+  min-height: 5000px;
 }
 
 .container {
@@ -287,9 +288,28 @@ body {
 #page-title {
   width: 100%;
   margin-bottom: 25px;
-  font-size: 28px;
-  font-weight: 600;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  h3 {
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .add-new {
+    padding: 10px 15px;
+    border: 1px solid $color;
+    color: $color;
+    border-radius: 3px;
+    margin-left: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 350ms all ease;
+    font-size: 12px;
+    &:hover {
+      background-color: $color;
+      color: #fff;
+    }
+  }
 }
 
 .box {
@@ -465,10 +485,11 @@ form {
     background-color: $border-color;
     width: fit-content;
     font-size: 12px;
-    padding: 5px 10px;
+    padding: 3px 8px;
     border-radius: 3px;
     margin: 5px;
     box-shadow: 0 0 5px rgba($text-color, 0.025);
+    line-height: 1;
     &.primary {
       color: #fff;
       background-color: $color;
@@ -513,5 +534,109 @@ form {
     .group {
       margin-bottom: 15px;
     }
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  .label {
+    font-size: 10px !important;
+  }
+  thead {
+    tr {
+      border-bottom: 2px solid $border-color;
+      &:hover {
+        background-color: transparent;
+      }
+      th {
+        font-weight: 600;
+        color: $text-color;
+      }
+    }
+  }
+  tr {
+    height: 40px;
+    line-height: 40px;
+    border-collapse: collapse;
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $border-color;
+    }
+    &:hover {
+      background-color: rgba($border-color, 0.25);
+    }
+    td,
+    th {
+      text-align: left;
+      padding: 0 5px;
+      box-sizing: border-box;
+      transition: 350ms all ease;
+      vertical-align: middle;
+      img {
+        display: block;
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        margin: 5px 0px;
+      }
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 25px;
+  height: 25px;
+  margin: 5px 2px;
+  text-align: center;
+  line-height: 25px;
+  background-color: $border-color;
+  color: #fff;
+  box-shadow: 0 0 5px rgba($text-color, 0.025);
+  border: 1px solid $border-color;
+  &:hover {
+    transform: scale(1.05);
+  }
+  i {
+    font-size: 16px;
+  }
+  /* COLORS */
+  &.primary {
+    background-color: $color;
+    color: #fff;
+    border-color: $color;
+  }
+  &.danger {
+    background-color: tomato;
+    color: #fff;
+    border-color: tomato;
+  }
+  &.warning {
+    background-color: #f8ac59;
+    color: #fff;
+    border-color: #f8ac59;
+  }
+  &.info {
+    background-color: #1d84c6;
+    color: #fff;
+    border-color: #1d84c6;
+  }
+  &.success {
+    background-color: #1bb394;
+    color: #fff;
+    border-color: #1bb394;
+  }
+  /* TPYES */
+  &.square {
+    border-radius: 3px;
+  }
+  &.circle {
+    border-radius: 100%;
+  }
+  &.outline {
+    background-color: transparent;
+    color: rgba($text-color, 0.75);
   }
 }

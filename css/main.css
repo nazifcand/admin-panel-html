@@ -9,6 +9,7 @@ body {
   color: #1a2242;
   font-family: "Poppins";
   background-color: #f5f6fa;
+  min-height: 5000px;
 }
 
 .container {
@@ -283,9 +284,28 @@ body {
 #page-title {
   width: 100%;
   margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+#page-title h3 {
   font-size: 28px;
   font-weight: 600;
   text-transform: uppercase;
+}
+#page-title .add-new {
+  padding: 10px 15px;
+  border: 1px solid #4b85ff;
+  color: #4b85ff;
+  border-radius: 3px;
+  margin-left: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 350ms all ease;
+  font-size: 12px;
+}
+#page-title .add-new:hover {
+  background-color: #4b85ff;
+  color: #fff;
 }
 
 .box {
@@ -454,10 +474,11 @@ form .checkbox.checked .cbox:before {
   background-color: #ebeaf0;
   width: fit-content;
   font-size: 12px;
-  padding: 5px 10px;
+  padding: 3px 8px;
   border-radius: 3px;
   margin: 5px;
   box-shadow: 0 0 5px rgba(26, 34, 66, 0.025);
+  line-height: 1;
 }
 .box-content .label.primary {
   color: #fff;
@@ -502,6 +523,109 @@ form .checkbox.checked .cbox:before {
 }
 #full-container form .group {
   margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+table .label {
+  font-size: 10px !important;
+}
+table thead tr {
+  border-bottom: 2px solid #ebeaf0;
+}
+table thead tr:hover {
+  background-color: transparent;
+}
+table thead tr th {
+  font-weight: 600;
+  color: #1a2242;
+}
+table tr {
+  height: 40px;
+  line-height: 40px;
+  border-collapse: collapse;
+}
+table tr:not(:last-of-type) {
+  border-bottom: 1px solid #ebeaf0;
+}
+table tr:hover {
+  background-color: rgba(235, 234, 240, 0.25);
+}
+table tr td,
+table tr th {
+  text-align: left;
+  padding: 0 5px;
+  box-sizing: border-box;
+  transition: 350ms all ease;
+  vertical-align: middle;
+}
+table tr td img,
+table tr th img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  margin: 5px 0px;
+}
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 25px;
+  height: 25px;
+  margin: 5px 2px;
+  text-align: center;
+  line-height: 25px;
+  background-color: #ebeaf0;
+  color: #fff;
+  box-shadow: 0 0 5px rgba(26, 34, 66, 0.025);
+  border: 1px solid #ebeaf0;
+  /* COLORS */
+  /* TPYES */
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+.btn i {
+  font-size: 16px;
+}
+.btn.primary {
+  background-color: #4b85ff;
+  color: #fff;
+  border-color: #4b85ff;
+}
+.btn.danger {
+  background-color: tomato;
+  color: #fff;
+  border-color: tomato;
+}
+.btn.warning {
+  background-color: #f8ac59;
+  color: #fff;
+  border-color: #f8ac59;
+}
+.btn.info {
+  background-color: #1d84c6;
+  color: #fff;
+  border-color: #1d84c6;
+}
+.btn.success {
+  background-color: #1bb394;
+  color: #fff;
+  border-color: #1bb394;
+}
+.btn.square {
+  border-radius: 3px;
+}
+.btn.circle {
+  border-radius: 100%;
+}
+.btn.outline {
+  background-color: transparent;
+  color: rgba(26, 34, 66, 0.75);
 }
 
 /*# sourceMappingURL=main.css.map */
