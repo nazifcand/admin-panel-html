@@ -1,5 +1,18 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+::-webkit-scrollbar {
+  width: 3px;
+  border-right: 3px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1a2242;
+}
+
 html,
 body {
   width: 100%;
@@ -244,6 +257,7 @@ body {
   align-items: center;
   justify-content: flex-end;
   margin-bottom: 25px;
+  box-shadow: 0 0 10px rgba(26, 34, 66, 0.025);
 }
 #content #content-inner #welcome img {
   width: 70px;
@@ -269,30 +283,19 @@ body {
   color: #fff;
   font-weight: 300;
 }
-#content #content-inner #welcome .welcome-box {
-  width: 175px;
-  height: 70px;
-  border-radius: 10px;
-  background-color: rgba(26, 34, 66, 0.25);
-  flex: flex-end;
-  margin: 0 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-#page-title {
+.page-title {
   width: 100%;
   margin-bottom: 25px;
   display: flex;
   align-items: center;
 }
-#page-title h3 {
+.page-title h3 {
   font-size: 28px;
   font-weight: 600;
   text-transform: uppercase;
 }
-#page-title .add-new {
+.page-title .add-new {
   padding: 10px 15px;
   border: 1px solid #4b85ff;
   color: #4b85ff;
@@ -303,7 +306,7 @@ body {
   transition: 350ms all ease;
   font-size: 12px;
 }
-#page-title .add-new:hover {
+.page-title .add-new:hover {
   background-color: #4b85ff;
   color: #fff;
 }
@@ -348,6 +351,9 @@ form .group {
 }
 form .group:last-of-type {
   margin-bottom: 0px;
+}
+form .group.fd-row {
+  flex-direction: row;
 }
 form span {
   margin-bottom: 8px;
@@ -407,6 +413,7 @@ form .checkbox {
   display: flex;
   align-items: center;
   cursor: pointer;
+  width: fit-content;
 }
 form .checkbox input[type=checkbox] {
   display: none;
@@ -434,6 +441,41 @@ form .checkbox.checked .cbox:before {
   font-size: 28px;
   top: -5px;
   left: 2px;
+}
+form .radio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: fit-content;
+  margin-right: 20px;
+}
+form .radio input[type=radio] {
+  display: none;
+}
+form .radio .radio-circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ebeaf0;
+  box-sizing: border-box;
+  border-radius: 100%;
+  margin-right: 10px;
+  position: relative;
+}
+form .radio span {
+  margin: 0;
+}
+form .radio.checked .radio-circle {
+  border-color: #4b85ff;
+}
+form .radio.checked .radio-circle:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #4b85ff;
+  border-radius: 100%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
 }
 
 .box-content h1 {
@@ -469,36 +511,6 @@ form .checkbox.checked .cbox:before {
 .box-content p {
   line-height: 1.5;
   margin-bottom: 25px;
-}
-.box-content .label {
-  background-color: #ebeaf0;
-  width: fit-content;
-  font-size: 12px;
-  padding: 3px 8px;
-  border-radius: 3px;
-  margin: 5px;
-  box-shadow: 0 0 5px rgba(26, 34, 66, 0.025);
-  line-height: 1;
-}
-.box-content .label.primary {
-  color: #fff;
-  background-color: #4b85ff;
-}
-.box-content .label.success {
-  color: #fff;
-  background-color: #1bb394;
-}
-.box-content .label.danger {
-  color: #fff;
-  background-color: tomato;
-}
-.box-content .label.warning {
-  color: #fff;
-  background-color: #f8ac59;
-}
-.box-content .label.info {
-  color: #fff;
-  background-color: #1d84c6;
 }
 
 #full-container {
@@ -571,20 +583,53 @@ table tr th img {
   margin: 5px 0px;
 }
 
+.label {
+  background-color: #ebeaf0;
+  width: fit-content;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin: 5px;
+  box-shadow: 0 0 5px rgba(26, 34, 66, 0.025);
+  line-height: 1;
+}
+.label.primary {
+  color: #fff;
+  background-color: #4b85ff;
+}
+.label.success {
+  color: #fff;
+  background-color: #1bb394;
+}
+.label.danger {
+  color: #fff;
+  background-color: tomato;
+}
+.label.warning {
+  color: #fff;
+  background-color: #f8ac59;
+}
+.label.info {
+  color: #fff;
+  background-color: #1d84c6;
+}
+
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   width: 25px;
   height: 25px;
-  margin: 5px 2px;
+  margin: 3px;
   text-align: center;
-  line-height: 25px;
   background-color: #ebeaf0;
   color: #fff;
   box-shadow: 0 0 5px rgba(26, 34, 66, 0.025);
   border: 1px solid #ebeaf0;
   /* COLORS */
   /* TPYES */
+  /* SIZES */
 }
 .btn:hover {
   transform: scale(1.05);
@@ -626,6 +671,127 @@ table tr th img {
 .btn.outline {
   background-color: transparent;
   color: rgba(26, 34, 66, 0.75);
+}
+.btn.sm {
+  width: 25px;
+  height: 25px;
+}
+.btn.lg {
+  width: 30px;
+  height: 30px;
+}
+.btn.lg i {
+  font-size: 18px;
+}
+
+#file-upload {
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ebeaf0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 25px;
+  margin-bottom: 50px;
+}
+#file-upload input[type=file] {
+  display: none;
+}
+#file-upload label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+#file-upload label i {
+  font-size: 48px;
+  margin-bottom: 5px;
+}
+#file-upload #previews {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+#file-upload button[type=submit] {
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #4b85ff;
+  color: #fff;
+  font-family: "Poppins";
+  box-shadow: 0 0 10px rgba(26, 34, 66, 0.025);
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 25px;
+  cursor: pointer;
+  display: none;
+  transition: 350ms all ease;
+}
+#file-upload button[type=submit]:hover {
+  opacity: 0.9;
+}
+#file-upload .img-preview {
+  width: 75px;
+  height: 75px;
+  border: 3px;
+  box-shadow: 0 0 5px rgba(26, 34, 66, 0.025);
+  margin: 5px;
+  display: block;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#library {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#library .file {
+  display: flex;
+  background-color: #fff;
+  padding: 10px;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(26, 34, 66, 0.025);
+  margin: 10px;
+  cursor: pointer;
+}
+#library .file img {
+  width: 165px;
+  height: 165px;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+#library .file span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(26, 34, 66, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+#overlay img {
+  max-height: 85%;
+  box-shadow: 0 0 20px rgba(26, 34, 66, 0.15);
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */

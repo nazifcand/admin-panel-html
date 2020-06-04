@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Galeri</title>
   <!-- style start -->
   <link rel="stylesheet" href="css/reset.css">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
@@ -126,15 +126,82 @@
 
       <!-- .page-title start -->
       <div class="page-title">
-        <h3>Boş Sayfa</h3>
+        <h3>Galeri</h3>
       </div>
       <!-- .page-title finish -->
 
-      <!-- 
+      <!-- #file-upload start -->
+      <form id="file-upload" enctype="multipart/form-data">
+        <input type="file" id="file-upload-input" name="resimler" multiple>
+        <div id="previews"></div>
+        <label for="file-upload-input">
+          <i class="ion ion-ios-cloud-upload"></i>
+          <span>Dosyaları yüklemek için tıklayın</span>
+        </label>
+        <button type="submit">Yükle</button>
+      </form>
+      <!-- #file-upload finish -->
 
-        Sayfa içeriği
+      <!-- .page-title start -->
+      <div class="page-title">
+        <h3>Kütüphane</h3>
+      </div>
+      <!-- .page-title finish -->
 
-       -->
+      <!-- #library start -->
+      <div id="library">
+
+        <!-- .file start -->
+        <div class="file">
+          <img src="https://picsum.photos/2000/3000?random=1" alt="">
+          <span>yyw788xq8wx7.jpg</span>
+        </div>
+        <!-- .file finish -->
+        <!-- .file start -->
+        <div class="file">
+          <img src="https://picsum.photos/2000/3000?random=2" alt="">
+          <span>yyw788xq8wx7.jpg</span>
+        </div>
+        <!-- .file finish -->
+        <!-- .file start -->
+        <div class="file">
+          <img src="https://picsum.photos/2000/3000?random=3" alt="">
+          <span>250?text=250x250.jpg</span>
+        </div>
+        <!-- .file finish -->
+        <!-- .file start -->
+        <div class="file">
+          <img src="https://picsum.photos/2000/3000?random=4" alt="">
+          <span>yyw788xq8wx7.jpg</span>
+        </div>
+        <!-- .file finish -->
+        <!-- .file start -->
+        <div class="file">
+          <img src="https://picsum.photos/2000/3000?random=5" alt="">
+          <span>yyw788xq8wx7.jpg</span>
+        </div>
+        <!-- .file finish -->
+        <!-- .file start -->
+        <div class="file">
+          <img src="https://picsum.photos/2000/3000?random=6" alt="">
+          <span>yyw788xq8wx7.jpg</span>
+        </div>
+        <!-- .file finish -->
+        <!-- .file start -->
+        <div class="file">
+          <img src="https://picsum.photos/2000/3000?random=7" alt="">
+          <span>yyw788xq8wx7.jpg</span>
+        </div>
+        <!-- .file finish -->
+
+      </div>
+      <!-- #library finish -->
+
+      <!-- #overlay start -->
+      <div id="overlay">
+        <img src="" alt="">
+      </div>
+      <!-- #overlay finish -->
 
     </div>
     <!-- #content-inner finish -->
