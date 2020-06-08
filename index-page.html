@@ -8,6 +8,7 @@
   <!-- style start -->
   <link rel="stylesheet" href="css/reset.css">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/alert.css">
   <link rel="stylesheet" href="css/main.css">
   <!-- style finish -->
 </head>
@@ -25,13 +26,13 @@
 
     <!-- #menu start -->
     <ul id="menu">
-      <li class="active">
+      <li class="">
         <a href="link4">
           <i class="ion ion-ios-grid"></i>
           <span>Üst menu 1</span>
         </a>
       </li>
-      <li>
+      <li class="active">
         <a>
           <i class="ion ion-ios-grid"></i>
           <span>Üst menu 2</span>
@@ -39,7 +40,7 @@
         </a>
         <ul class="sub-menu">
           <li><a href="link1"><i class="ion ion-ios-bluetooth"></i>Alt menu 1</a></li>
-          <li><a href="link2"><i class="ion ion-ios-beer"></i>Alt menu 2</a></li>
+          <li class="active"><a href="link2"><i class="ion ion-ios-beer"></i>Alt menu 2</a></li>
           <li><a href="link3"><i class="ion ion-ios-boat"></i>Alt menu 3</a></li>
         </ul>
       </li>
@@ -396,6 +397,7 @@
   <!-- #content finish -->
 
   <!-- script start -->
+  <script src="js/alert.js"></script>
   <script src="js/main.js"></script>
   <!-- script finish -->
 </body>

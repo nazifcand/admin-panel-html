@@ -117,6 +117,18 @@ body {
 #sidebar #menu li.active .sub-menu {
   height: auto;
 }
+#sidebar #menu li.active .sub-menu li a {
+  color: #939bb0;
+}
+#sidebar #menu li.active .sub-menu li a i {
+  color: #939bb0;
+}
+#sidebar #menu li.active .sub-menu li.active a {
+  color: #1a2242;
+}
+#sidebar #menu li.active .sub-menu li.active a i {
+  color: #4b85ff;
+}
 
 #content {
   flex: 1;
@@ -377,6 +389,9 @@ form input[type=file]:focus,
 form select:focus,
 form textarea:focus {
   border-color: #4b85ff;
+}
+form input[type=password] {
+  letter-spacing: 3px;
 }
 form input[type=file] {
   height: auto;
