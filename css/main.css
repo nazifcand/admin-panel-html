@@ -809,4 +809,36 @@ table tr th img {
   border-radius: 10px;
 }
 
+.notification {
+  background-color: #ebeaf0;
+  color: #1a2242;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  line-height: 1.35;
+  box-shadow: 0 0 10px rgba(26, 34, 66, 0.025);
+  font-size: 13px;
+}
+.notification.primary {
+  background-color: rgba(75, 133, 255, 0.75);
+  color: #fff;
+}
+.notification.danger {
+  background-color: rgba(255, 99, 71, 0.75);
+  color: #fff;
+}
+.notification.success {
+  background-color: rgba(27, 179, 148, 0.75);
+  color: #fff;
+}
+.notification.warning {
+  background-color: rgba(248, 172, 89, 0.75);
+  color: #fff;
+}
+.notification.info {
+  background-color: rgba(29, 132, 198, 0.75);
+  color: #fff;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -834,3 +834,35 @@ table {
     border-radius: 10px;
   }
 }
+
+.notification {
+  background-color: $border-color;
+  color: $text-color;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  line-height: 1.35;
+  box-shadow: 0 0 10px rgba($text-color, 0.025);
+  font-size: 13px;
+  &.primary {
+    background-color: rgba($color, 0.75);
+    color: #fff;
+  }
+  &.danger {
+    background-color: rgba($danger-color, 0.75);
+    color: #fff;
+  }
+  &.success {
+    background-color: rgba($success-color, 0.75);
+    color: #fff;
+  }
+  &.warning {
+    background-color: rgba($warning-color, 0.75);
+    color: #fff;
+  }
+  &.info {
+    background-color: rgba($info-color, 0.75);
+    color: #fff;
+  }
+}
