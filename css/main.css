@@ -229,6 +229,10 @@ body {
   height: 100%;
   margin: 0 12px;
   position: relative;
+  cursor: pointer;
+}
+#content #content-header #notifications li:hover .sub-notif {
+  display: flex;
 }
 #content #content-header #notifications li .counter {
   top: -6px;
@@ -249,6 +253,78 @@ body {
   color: #c6c7cc;
   text-decoration: none;
   font-size: 22px;
+}
+#content #content-header #notifications li .sub-notif {
+  width: 350px;
+  min-height: 100px;
+  padding: 0 0 50px 0;
+  box-sizing: border-box;
+  position: absolute;
+  top: 20px;
+  flex-direction: column;
+  right: 0;
+  background-color: #fff;
+  border-radius: 3px;
+  border-top: 3px solid #4b85ff;
+  filter: drop-shadow(0 0 5px rgba(26, 34, 66, 0.1));
+  display: none;
+  overflow: hidden;
+}
+#content #content-header #notifications li .sub-notif #all-notif {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  background-color: #fff;
+  border-top: 1px solid #ebeaf0;
+  color: #4b85ff;
+  transition: 350ms all ease;
+}
+#content #content-header #notifications li .sub-notif #all-notif:hover {
+  color: #fff;
+  background-color: #4b85ff;
+}
+#content #content-header #notifications li .sub-notif li {
+  height: 40px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin: 0;
+}
+#content #content-header #notifications li .sub-notif li:not(:last-of-type) {
+  border-bottom: 1px solid #ebeaf0;
+}
+#content #content-header #notifications li .sub-notif li:hover {
+  background-color: rgba(235, 234, 240, 0.2);
+}
+#content #content-header #notifications li .sub-notif li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #1a2242;
+  transition: 350ms all ease;
+}
+#content #content-header #notifications li .sub-notif li a i {
+  font-size: 22px;
+  margin-right: 10px;
+  color: #ebeaf0;
+}
+#content #content-header #notifications li .sub-notif li a span {
+  font-size: 12px;
+  font-weight: 300;
+}
+#content #content-header #notifications li .sub-notif li a span strong {
+  font-weight: 600;
+}
+#content #content-header #notifications li .sub-notif li a time {
+  font-size: 10px;
+  font-weight: 300;
+  margin-left: auto;
 }
 #content #content-inner {
   width: 100%;
