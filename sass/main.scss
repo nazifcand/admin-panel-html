@@ -699,6 +699,14 @@ table {
         object-fit: cover;
         margin: 5px 0px;
       }
+      a {
+        font-weight: 500;
+        color: $color;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
