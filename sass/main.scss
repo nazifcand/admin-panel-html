@@ -460,6 +460,26 @@ form {
     }
   }
 
+  .color-palette {
+    position: relative;
+    input {
+      &[type='text'] {
+        width: 150px;
+      }
+      &[type='color'] {
+        width: 60px;
+        height: 40px;
+        border: none;
+        position: absolute;
+        margin: 0;
+        margin-left: 10px;
+        padding: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+    }
+  }
+
   span {
     margin-bottom: 8px;
   }

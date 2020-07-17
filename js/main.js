@@ -110,3 +110,13 @@ document.addEventListener('click', (e) => {
     overlay.style.display = 'none';
   }
 });
+
+/* Color Palette */
+
+const colors = document.querySelectorAll('input[type="color"]');
+const hex_colors = document.querySelectorAll('.color-hex');
+colors.forEach((color, index) => {
+  color.addEventListener('change', (e) => {
+    hex_colors[index].value = e.target.value;
+  });
+});
